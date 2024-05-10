@@ -3,10 +3,7 @@ import express from "express";
 import crypto from "crypto";
 
 dotenv.config();
-
-const PORT = process.env.PORT || "3001";
-
-const { AUTH_TOKEN } = process.env;
+const { AUTH_TOKEN, PORT = "3001" } = process.env;
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
