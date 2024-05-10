@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "ts-node scripts/index.ts",
-    "route": "ts-node routes/index.ts",
+    "route": "nodemon routes/index.ts",
     "grok": "ngrok http --region=us --hostname=pbread.ngrok.io 3001"
   },
   "dependencies": {
