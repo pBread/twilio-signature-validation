@@ -10,5 +10,9 @@ console.log("==script started==");
 (async () => {
   let data: { [key: string]: any } = {};
 
+  data.convo = await client.conversations.v1
+    .services(CONVO_SVC_SID)
+    .conversations.create({ friendlyName: new Date().toLocaleString() });
+
   console.log(data);
 })().then(() => console.log("==script stopped=="));

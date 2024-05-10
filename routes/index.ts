@@ -1,13 +1,11 @@
 import dotenv from "dotenv";
 import express from "express";
-import twilio from "twilio";
 
 dotenv.config();
 
 const PORT = process.env.PORT || "3001";
 
 const { AUTH_TOKEN } = process.env;
-const client = twilio(AUTH_TOKEN);
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
